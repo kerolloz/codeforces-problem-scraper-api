@@ -7,12 +7,12 @@ def parse_problem(problem_link):
     soup = bs4.BeautifulSoup(markup, "html.parser")
     problem = {
         "title": soup.find('div', 'title').string,
-        "time_limit": soup.find('div', 'time-limit').contents[1].string,
-        "memory_limit": soup.find('div', 'memory-limit').contents[1].string,
+        "timeLimit": soup.find('div', 'time-limit').contents[1].string,
+        "memoryLimit": soup.find('div', 'memory-limit').contents[1].string,
         "statement": get_statement(soup),
-        "input_specification": get_content(soup, 'input-specification'),
-        "output_specification": get_content(soup, 'output-specification'),
-        "sample_tests": get_sample_tests(soup),
+        "inputSpecification": get_content(soup, 'input-specification'),
+        "outputSpecification": get_content(soup, 'output-specification'),
+        "samples": get_sample_tests(soup),
         "note": get_content(soup, 'note'),
     }
     print(problem)
