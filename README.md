@@ -40,7 +40,7 @@ You got two options:
   - Install packages in `requirements.txt` using pip3.  
     `pip3 install -r requirements.txt`
   - Start the server.  
-    `python3 api.py`
+    `python3 main.py`
 - docker installed
   - build the image `docker build -t cf-problem-scrap-api .`
   - create a container `docker run -d --name cf-api -p 80:80 cf-problem-scrap-api`
