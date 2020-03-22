@@ -7,8 +7,8 @@ def parse_problem(problem_link):
     soup = bs4.BeautifulSoup(markup, "html.parser")
     problem = {
         "title": soup.find('div', 'title').string,
-        "timeLimit": soup.find('div', 'time-limit').contents[1].string,
-        "memoryLimit": soup.find('div', 'memory-limit').contents[1].string,
+        "timeLimit": split_limit(soup.find('div', 'time-limit').contents[1].string),
+        "memoryLimit": split_limit(soup.find('div', 'memory-limit').contents[1].string),
         "statement": get_statement(soup),
         "inputSpecification": get_content(soup, 'input-specification'),
         "outputSpecification": get_content(soup, 'output-specification'),
@@ -18,6 +18,12 @@ def parse_problem(problem_link):
     print(problem)
     return problem
 
+def split_limit(soup):
+    l = soup.split()
+    return {
+        "value": int(l[0]),
+        "unit": l[1]
+    }
 
 def group_tests(lst):
     """returns a list of list({in, out})"""
