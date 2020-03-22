@@ -9,7 +9,7 @@ for example if you try to parse [this](https://codeforces.com/contest/1325/probl
 
 ```json
 {
-  {
+  
   "inputSpecification": "<p>The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 100)$$$  — the number of testcases.</p><p>Each testcase consists of one line containing a single integer, $$$x$$$ $$$(2 \\le x \\le 10^9)$$$.</p>",
   "memoryLimit": {
     "unit": "megabytes",
@@ -29,7 +29,6 @@ for example if you try to parse [this](https://codeforces.com/contest/1325/probl
     "value": 1
   },
   "title": "A. EhAb AnD gCd"
-}
 }
 ```
 
