@@ -26,8 +26,8 @@ def split_limit(soup):
     }
 
 def group_tests(lst):
-    """returns a list of list({in, out})"""
-    return [{"in": _in, "out": _out} for _in, _out in pairwise(lst)]
+    """returns a list of list({input, output})"""
+    return [{"input": _in, "output": _out} for _in, _out in pairwise(lst)]
 
 
 def get_sample_tests(souped_html):

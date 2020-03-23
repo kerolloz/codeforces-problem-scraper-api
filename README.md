@@ -9,7 +9,6 @@ for example if you try to parse [this](https://codeforces.com/contest/1325/probl
 
 ```json
 {
-  
   "inputSpecification": "<p>The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 100)$$$  — the number of testcases.</p><p>Each testcase consists of one line containing a single integer, $$$x$$$ $$$(2 \\le x \\le 10^9)$$$.</p>",
   "memoryLimit": {
     "unit": "megabytes",
@@ -19,8 +18,8 @@ for example if you try to parse [this](https://codeforces.com/contest/1325/probl
   "outputSpecification": "<p>For each testcase, output a pair of positive integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le 10^9)$$$ such that $$$GCD(a,b)+LCM(a,b)=x$$$. It's guaranteed that the solution always exists. If there are several such pairs $$$(a, b)$$$, you can output any of them.</p>",
   "samples": [
     {
-      "in": "\n2\n2\n14\n",
-      "out": "\n1 1\n6 4\n"
+      "input": "\n2\n2\n14\n",
+      "output": "\n1 1\n6 4\n"
     }
   ],
   "statement": "<p>You are given a positive integer $$$x$$$. Find <span class=\"tex-font-style-bf\">any</span> such $$$2$$$ positive integers $$$a$$$ and $$$b$$$ such that $$$GCD(a,b)+LCM(a,b)=x$$$.</p><p>As a reminder, $$$GCD(a,b)$$$ is the greatest integer that divides both $$$a$$$ and $$$b$$$. Similarly, $$$LCM(a,b)$$$ is the smallest integer such that both $$$a$$$ and $$$b$$$ divide it.</p><p>It's guaranteed that the solution always exists. If there are several such pairs $$$(a, b)$$$, you can output any of them.</p>",
@@ -43,10 +42,10 @@ You got two options:
   - Start the server.  
     `python3 main.py`
 - docker installed:
-  - build the image   
-  `docker build -t cf-problem-scrap-api .`
+  - build the image  
+    `docker build -t cf-problem-scrap-api .`
   - create a container  
-  `docker run -d --name cf-api -p 80:80 cf-problem-scrap-api`
+    `docker run -d --name cf-api -p 80:80 cf-problem-scrap-api`
 
 ## JSON Schema
 
@@ -61,8 +60,8 @@ You got two options:
   "outputSpecification": String,
   "samples": [
     {
-      "in": String,
-      "out": String
+      "input": String,
+      "output": String
     }
   ],
   "statement": String,
