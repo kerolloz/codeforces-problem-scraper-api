@@ -15,8 +15,8 @@ def parse_problem(problem_link):
         "samples": get_sample_tests(soup),
         "note": get_content(soup, 'note'),
     }
-    print(problem)
     return problem
+
 
 def split_limit(soup):
     l = soup.split()
@@ -24,6 +24,7 @@ def split_limit(soup):
         "value": int(l[0]),
         "unit": l[1]
     }
+
 
 def group_tests(lst):
     """returns a list of list({input, output})"""
