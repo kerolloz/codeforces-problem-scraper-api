@@ -50,7 +50,10 @@ def get_statement(soup):
 
 
 def get_content(soup, _class=''):
-    tags = soup.find('div', _class).contents
+    element = soup.find('div', _class)
+    if not element:
+        return None
+    tags = element.contents
     tags.pop(0)
     return concat_contents(tags)
 
