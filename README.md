@@ -1,11 +1,12 @@
 # CodeForces Problem Scraper API
 
-A Simple Flask-Python API to parse Codeforces problem into JSON.
+A straightforward Flask-Python API designed to parse Codeforces problems into JSON format.
 
-Make a **GET** request to the root `/?id=1325/A` and provide the required query parameter `id`.
-The `id` should be in the following format `contest_id/problem_letter`.
+## Endpoint
 
-For example, if you try to parse [this](https://codeforces.com/contest/1325/problem/A) problem you get the following JSON response:
+Make a **GET** request to the root `/?id=1325/A` and provide the required query parameter `id`. The `id` should be in the following format `contest_id/problem_letter`.
+
+For example, parsing [this](https://codeforces.com/contest/1325/problem/A) problem yields the following JSON response:
 
 ```json
 {
@@ -33,20 +34,19 @@ For example, if you try to parse [this](https://codeforces.com/contest/1325/prob
 
 ## Usage
 
-After cloning the repository
+After cloning the repository, you have two options:
 
-You got 2 options:
-
-- _Python3_ installed:
-  - Go to the `/app` directory.
+- **Option 1: Python3 Installed**
+  - Navigate to the `/app` directory.
   - Install packages in `requirements.txt` using pip3.  
     `pip3 install -r requirements.txt`
   - Start the server.  
     `FLASK_APP=main.py flask run`
-- _Docker_ installed:
-  - build the image  
+
+- **Option 2: Docker Installed**
+  - Build the image.  
     `docker build -t cf-problem-scraper-api .`
-  - create a container  
+  - Create a container.  
     `docker run -d --name cf-api -p 80:80 cf-problem-scraper-api`
 
 ## JSON Schema
@@ -74,3 +74,5 @@ You got 2 options:
   "title": String
 }
 ```
+
+Feel free to explore and integrate this API into your projects!
